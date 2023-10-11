@@ -1,0 +1,19 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection.Emit;
+
+namespace EFCorePeliculas.Entidades.Configuraciones
+{
+    public class PeliculaActorConfig : IEntityTypeConfiguration<PeliculaActor>
+    {
+        public void Configure(EntityTypeBuilder<PeliculaActor> builder)
+        {
+            //Esto es una llave primaria compuesta
+            builder.HasKey(prop =>
+                new { prop.PeliculaId, prop.ActorId });
+
+            builder.Property(prop => prop.Personaje)
+                .HasMaxLength(150);
+        }
+    }
+}

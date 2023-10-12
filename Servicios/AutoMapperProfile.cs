@@ -40,6 +40,8 @@ namespace EFCorePeliculas.Servicios
             
             CreateMap<PeliculaActorCreacionDTO,PeliculaActor>();
 
+            CreateMap<ActorCreacionDTO,Actor>();
+
         }
     }
 }

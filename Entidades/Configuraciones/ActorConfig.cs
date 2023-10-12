@@ -17,6 +17,8 @@ namespace EFCorePeliculas.Entidades.Configuraciones
 
             builder.Property(prop => prop.FechaNacimiento)
                 .IsRequired(false);
+
+            builder.Property(x => x.Nombre).HasField("_nombre");
         }
     }
 }

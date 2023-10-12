@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231009025357_Initial")]
+    [Migration("20231012183949_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -134,11 +134,9 @@ namespace EFCorePeliculas.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("PosterURL")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -158,7 +156,6 @@ namespace EFCorePeliculas.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Personaje")
-                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
@@ -302,8 +299,7 @@ namespace EFCorePeliculas.Migrations
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.Cine", b =>
                 {
-                    b.Navigation("CineOferta")
-                        .IsRequired();
+                    b.Navigation("CineOferta");
 
                     b.Navigation("SalasDeCine");
                 });

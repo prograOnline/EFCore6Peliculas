@@ -58,10 +58,10 @@ namespace EFCorePeliculas.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EnCartelera = table.Column<bool>(type: "bit", nullable: false),
                     FechaEstreno = table.Column<DateTime>(type: "date", unicode: false, maxLength: 500, nullable: false),
-                    PosterURL = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    PosterURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -141,7 +141,7 @@ namespace EFCorePeliculas.Migrations
                 {
                     PeliculaId = table.Column<int>(type: "int", nullable: false),
                     ActorId = table.Column<int>(type: "int", nullable: false),
-                    Personaje = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Personaje = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     Orden = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

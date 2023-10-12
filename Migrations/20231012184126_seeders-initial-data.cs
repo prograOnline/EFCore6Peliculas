@@ -6,7 +6,7 @@ using NetTopologySuite.Geometries;
 
 namespace EFCorePeliculas.Migrations
 {
-    public partial class DatosDePrueba : Migration
+    public partial class seedersinitialdata : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -65,8 +65,8 @@ namespace EFCorePeliculas.Migrations
                 columns: new[] { "Id", "CineId", "FechaFin", "FechaInicio", "PorcentajeDescuento" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 10, 15, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 10, 8, 0, 0, 0, 0, DateTimeKind.Local), 10m },
-                    { 2, 4, new DateTime(2023, 10, 13, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 10, 8, 0, 0, 0, 0, DateTimeKind.Local), 15m }
+                    { 1, 1, new DateTime(2023, 10, 19, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 10, 12, 0, 0, 0, 0, DateTimeKind.Local), 10m },
+                    { 2, 4, new DateTime(2023, 10, 17, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 10, 12, 0, 0, 0, 0, DateTimeKind.Local), 15m }
                 });
 
             migrationBuilder.InsertData(

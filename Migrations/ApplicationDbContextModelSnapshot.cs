@@ -180,16 +180,16 @@ namespace EFCorePeliculas.Migrations
                         {
                             Id = 2,
                             CineId = 4,
-                            FechaFin = new DateTime(2023, 10, 13, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2023, 10, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2023, 10, 17, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2023, 10, 12, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 15m
                         },
                         new
                         {
                             Id = 1,
                             CineId = 1,
-                            FechaFin = new DateTime(2023, 10, 15, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2023, 10, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2023, 10, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2023, 10, 12, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 10m
                         });
                 });
@@ -256,11 +256,9 @@ namespace EFCorePeliculas.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("PosterURL")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -322,7 +320,6 @@ namespace EFCorePeliculas.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Personaje")
-                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
@@ -674,8 +671,7 @@ namespace EFCorePeliculas.Migrations
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.Cine", b =>
                 {
-                    b.Navigation("CineOferta")
-                        .IsRequired();
+                    b.Navigation("CineOferta");
 
                     b.Navigation("SalasDeCine");
                 });

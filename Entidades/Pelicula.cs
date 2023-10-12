@@ -11,8 +11,8 @@ namespace EFCorePeliculas.Entidades
         //[Unicode(false)] <- hacerlo de esta manera se le llama configuración por atributos
         public string PosterURL { get; set; }
         public List<Genero> Generos { get; set; }
-        public HashSet<SalaDeCine> SalasDeCine { get; set; }
-        public HashSet<PeliculaActor> PeliculasActores { get; set; }
+        public List<SalaDeCine> SalasDeCine { get; set; }
+        public List<PeliculaActor> PeliculasActores { get; set; }
 
 
     }
